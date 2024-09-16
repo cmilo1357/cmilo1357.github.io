@@ -4,13 +4,17 @@
 
     <div class="paragraph">
       <div>
-        I'm <strong>John Matrix</strong>, a former Delta Force operative, now a hobbyist lumberjack.<br/>
-        I spend my days living alone with my daughter Jenny, and cutting trees and carrying trunks around to keep in shape.
+        I'm <strong>Camilo Sanchez</strong>, a passionate digital entertainment engineer with a strong focus on game development.<br/>
+        My expertise spans technical artistry and solo game development. I have professional experience working as a technical artist at<br/>
+        ON3D Studios and have successfully created three Fortnite maps using UEFN.
       </div>
 
-      <div style="margin-top: 20px;">I've worked on  <router-link to="/game-projects">stuff</router-link>, on <router-link to="/other-projects">other stuff</router-link>, and took part in <router-link to="/resume">a few things</router-link> as well.</div>
+      <div style="margin-top: 20px;">I have currently worked on this <router-link to="/game-projects">game projects</router-link>, 
+        and this is some of my <router-link to="/other-projects">artistry work</router-link> as well.</div>
 
-      <div style="margin-top: 40px;">I'm <strong>currently looking for a job</strong> as a monk, like my good friend John Rambo did a few years back. You can reach me at <a href="mailto:johnmatrix@deltaforce.us">johnmatrix@deltaforce.us</a> or <router-link to="/contact">through here</router-link>.</div>
+      <div style="margin-top: 40px;">I'm <strong>always looking for new challenges </strong> that will help me grow as a game developer. 
+        If you're interested in collaborating, feel free to reach out to me at <a href="mailto:cmilo1357@gmail.com">cmilo1357@gmail.com</a> 
+        or <router-link to="/contact">through here</router-link>.</div>
     </div>
 
     <div class="photo">
