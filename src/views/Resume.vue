@@ -1,191 +1,102 @@
 <template>
-  <div>
-    <h1>Resume</h1>
-
-    <div class="paragraph">
-      I'm <strong>John Matrix</strong>, a former Delta Force operative with lots of experience, lots of training and huge muscles.
-      <br />After graduating from kindergarten, I've been enrolled in the army for 25 years, where I learned to destroy things in an amazing number of ways.
-      <br />I joined the Delta Force because I thought it was Greek lessons, but I quickly adapted to this unexpected environment and became a key element.
-      <br />I love teamwork, but I can also go in solo depending on the mission requirements.
-      <br />
-      <br />Right now I'm trying to find inner peace after I've read some personal development books. I'm looking for a monk job so if you have any opportunity feel free to 
-      <router-link to="/contact">contact me</router-link>.
-      <br />
-      <br />Besides war, I'm passionate about firearms, martial arts, explosions, push-ups and flowers.
-
-      <div style="margin-top:20px; margin-bottom:20px;">
-        <a class="download-link" href="d/resume-en.pdf" target="_blank"><i class="fa fa-download fa-lg fa-fw"></i> Download as PDF 🇬🇧</a>
-        <a class="download-link" href="d/cv-fr.pdf" target="_blank"><i class="fa fa-download fa-lg fa-fw"></i> Télécharger en PDF 🇫🇷</a>
-        <div style="clear:both"></div>
-      </div>
-    </div>
-    <div class="photo">
-      <img src="img/resume-photo.png" alt="Photo of John" />
-    </div>
-
-    <div style="clear:both"></div>
-
-    <div class="full-content">
-      <h2>Work experience</h2>
-
-      <h3>Operation Classified - Delta Force</h3>
-      <h4>2018-2019</h4>
-
-      <div>It's classified so I can't speak about it.</div>
-
-      <div class="tech-stack">Firearms, knives, grenades, Hummer vehicle, parachute,...</div>
-
-      <h3>Operation Classified - Delta Force</h3>
-      <h4>2015-2017</h4>
-
-      <div>It's classified so I can't speak about it.</div>
-
-      <div class="tech-stack">Even more Firearms, knives, grenades, Hummer vehicle, parachute,...</div>
-
-      <h3>Operation Classified - Delta Force</h3>
-      <h4>2012-2015</h4>
-
-      <div>It's classified so I can't speak about it.</div>
-
-      <div class="tech-stack">Firearms, knives, grenades, Hummer vehicle, parachute,...</div>
-
-      <h2>Skills</h2>
-
-      <div class="skill-set">
-        <h3>Lethal</h3>
-        <SkillRate name="Handguns" :rate="5" />
-        <SkillRate name="Rifles" :rate="5" />
-        <SkillRate name="Shotguns" :rate="5" />
-        <SkillRate name="Machineguns" :rate="5" />
-        <SkillRate name="Missile launchers" :rate="5" />
-        <SkillRate name="Knives" :rate="5" />
-        <SkillRate name="Hand to hand combat" :rate="5" />
-      </div>
-
-      <div class="skill-set">
-        <h3>Non-lethal</h3>
-        <SkillRate name="Sneaking" :rate="1" />
-        <SkillRate name="Negotiation" :rate="1" />
-        <SkillRate name="Seduction" :rate="1" />
-        <SkillRate name="Sense of humor" :rate="2" />
-      </div>
-      <div style="clear:both" />
-
-      <h2>Education</h2>
-
-      <h3>Kindergarten - 1985</h3>
-      <h4>Kindergarten degree</h4>
-      <div>Specialty in bullying and fighting (58 wins, 58 K-O, 0 losses)</div>
-
-      <h2>Languages</h2>
-
-      <h3>American</h3>
-      <div>Basic knowledge but I know lots of one-liners</div>
-
-      <h3>That's it</h3>
-      <div>Who needs another language when you speak American?</div>
-
-
-      <h2>Besides...</h2>
+  <div class="page-shell resume-page">
+    <header class="resume-header">
       <div>
-        <h3>I ❤️ Violence</h3>
-        <div>I find it really soothing to just shoot at bad guys</div>
-
-        <h3>I 🧡 Sports</h3>
-        <div>I used to be thin but then I ingested 10 kilos of steroids and proteins a day while doing 1000 push-ups.</div>
-
-        <h3>I 💛 Politics</h3>
-        <div>I hope I can have a career here someday but I might have temper issues.</div>
-
-        <h3>I 💚 Flowers</h3>
-        <div>Especially the big ones, with the trunk and leaves.</div>
-
+        <p class="eyebrow">Character sheet · Updated 2026</p>
+        <h1 class="page-title">Built for gameplay.<br/>Tuned for performance.</h1>
+        <p class="lede">A hybrid developer who can own systems, communicate with artists, and carry an experience from prototype through launch.</p>
       </div>
-    </div>
+      <a class="button download" href="d/Camilo_Sanchez_Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+    </header>
+
+    <section class="profile-panel" aria-labelledby="profile-heading">
+      <p class="panel-code" aria-hidden="true">PROFILE.LOG</p>
+      <h2 id="profile-heading">UEFN / Verse Gameplay Developer <span>+</span> Technical Artist</h2>
+      <p>Hands-on experience independently developing and shipping five Fortnite islands from concept to release. I build modular, event-driven Verse systems spanning progression, economy, jobs, housing, quests, UI, and persistence, then support them with technical art, debugging, and optimization.</p>
+    </section>
+
+    <section class="resume-grid">
+      <div class="experience-column">
+        <div class="section-kicker"><span>01</span><h2>Experience</h2></div>
+        <article class="timeline-item">
+          <div class="timeline-mark"></div>
+          <div class="timeline-meta"><span>Jan 2024 — Present</span><span>Independent</span></div>
+          <h3>UEFN / Verse Game Developer</h3>
+          <ul>
+            <li>Released five Fortnite islands while owning gameplay programming, level design, QA, UI, VFX, 3D art, publishing, and promotional content.</li>
+            <li>Designed per-player runtimes and event-driven managers for economy, jobs, modifiers, input, UI, audio, and persistent profile data.</li>
+            <li>Built reusable systems for contracts, housing upgrades, quests, shops, banking, inventories, and player-facing feedback.</li>
+            <li>Profiled and optimized gameplay, materials, Niagara VFX, streaming, and data layers within UEFN constraints.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-mark"></div>
+          <div class="timeline-meta"><span>Jun 2023 — Jun 2024</span><span>ON3D Studios</span></div>
+          <h3>Technical Artist</h3>
+          <p class="subrole">Junior Technical Artist · Dec 2023—Jun 2024<br/>Technical Artist Intern · Jun—Nov 2023</p>
+          <ul>
+            <li>Owned the ideation and production of real-time VFX designed to communicate gameplay clearly.</li>
+            <li>Collaborated with developers to integrate effects, iterate on mechanics, and solve technical issues.</li>
+            <li>Created tools and workflows for the art team and validated effects against performance requirements.</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="skills-column">
+        <div class="section-kicker"><span>02</span><h2>Core expertise</h2></div>
+        <div class="skill-group"><h3>Verse & UEFN</h3><p>Gameplay architecture, event-driven systems, per-player state, persistence, async flows, reusable devices, debugging, memory, and optimization.</p></div>
+        <div class="skill-group"><h3>Gameplay & UI</h3><p>Progression, economy, jobs, quests, multiplayer systems, UMG, Verse UI, banking, shops, inventories, and feedback.</p></div>
+        <div class="skill-group"><h3>Technical art & tools</h3><p>Unreal Engine 4/5, Niagara, materials, shaders, HLSL, Blender, Maya, Substance Designer, Photoshop, After Effects, C#, and Lua.</p></div>
+        <div class="education-card">
+          <p class="panel-code">EDUCATION</p>
+          <h3>B.Eng. in Digital Entertainment Design</h3>
+          <p>Universidad Pontificia Bolivariana<br/>2019—2024</p>
+          <h3>VFX Apprentice</h3>
+          <p>Stylized 2D/3D Visual FX<br/>2023—2024</p>
+        </div>
+      </aside>
+    </section>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import SkillRate from "@/components/SkillRate.vue";
-
-export default Vue.extend({
-  name: "Resume",
-  components: {
-    SkillRate,
-  },
-});
-</script>
-
 <style scoped>
-h2 {
-  font-weight: 100;
-  font-size: 2em;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 50px;
+.resume-header { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; padding: 46px 0 84px; }
+.resume-header .button { margin-bottom: 6px; }
+.profile-panel { position: relative; margin-bottom: 90px; padding: 42px 46px; overflow: hidden; border: 1px solid var(--line); border-left: 3px solid var(--cyan); background: var(--panel); }
+.profile-panel::after { content: '01'; position: absolute; right: 22px; bottom: -32px; color: rgba(70,224,213,.045); font: 600 9rem/1 'IBM Plex Mono', monospace; }
+.panel-code { margin: 0 0 14px; color: var(--cyan); font: 600 .68rem/1 'IBM Plex Mono', monospace; letter-spacing: .12em; }
+.profile-panel h2 { max-width: 820px; margin: 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.04em; }
+.profile-panel h2 span { color: var(--amber); }
+.profile-panel > p:last-child { max-width: 900px; margin: 22px 0 0; color: var(--muted); font-size: 1.02rem; }
+.resume-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: 86px; }
+.section-kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+.section-kicker span { color: var(--cyan); font: 600 .68rem/1 'IBM Plex Mono', monospace; }
+.section-kicker h2 { margin: 0; font-size: 1.7rem; letter-spacing: -.035em; }
+.timeline-item { position: relative; margin-left: 8px; padding: 0 0 62px 36px; border-left: 1px solid var(--line); }
+.timeline-mark { position: absolute; width: 11px; height: 11px; top: 5px; left: -6px; background: var(--night); border: 2px solid var(--cyan); box-shadow: 0 0 10px rgba(70,224,213,.35); }
+.timeline-meta { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font: 600 .68rem/1.4 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+.timeline-meta span:last-child { color: var(--amber); text-align: right; }
+.timeline-item h3 { margin: 12px 0 13px; font-size: 1.55rem; letter-spacing: -.03em; }
+.timeline-item ul { margin: 20px 0 0; padding: 0; list-style: none; }
+.timeline-item li { position: relative; margin-bottom: 10px; padding-left: 18px; color: var(--muted); font-size: .95rem; }
+.timeline-item li::before { content: '›'; position: absolute; left: 0; color: var(--cyan); }
+.subrole { color: var(--muted); font: 500 .72rem/1.7 'IBM Plex Mono', monospace; }
+.skill-group { margin-bottom: 35px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.skill-group h3 { margin: 0 0 10px; color: var(--cyan); font: 600 .75rem/1.4 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .07em; }
+.skill-group p { margin: 0; color: var(--muted); font-size: .9rem; }
+.education-card { margin-top: 52px; padding: 28px; border: 1px solid var(--line); background: var(--panel); }
+.education-card h3 { margin: 22px 0 5px; font-size: 1rem; }
+.education-card p { margin: 0; color: var(--muted); font-size: .82rem; }
+@media (max-width: 850px) {
+  .resume-header, .resume-grid { grid-template-columns: 1fr; }
+  .resume-header .button { width: fit-content; }
+  .resume-grid { gap: 40px; }
 }
-h3 {
-  font-weight: 100;
-  font-size: 1.6em;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 30px;
-}
-h4 {
-  font-weight: 100;
-  font-size: 1.3em;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 15px;
-  font-style: italic;
-}
-
-.paragraph {
-  max-width: 700px;
-}
-
-.download-link {
-  float:left;
-  margin-right: 50px;
-}
-
-.full-content div {
-  max-width: 800px;
-}
-
-.skill-set h3 {
-  padding-bottom: 10px;
-}
-
-.photo img {
-  height: 300px;
-  width: 300px;
-}
-
-.tech-stack {
-  font-style: italic;
-}
-
-.photo {
-  margin-top: 50px;
-  text-align: center;
-}
-
-@media only screen and (min-width: 620px){
-  .paragraph {
-    float: left;
-  }
-
-  .photo {
-    float: left;
-    padding: 30px;
-    padding-left: 80px;
-  }
-
-  .skill-set {
-    float: left;
-    padding-right: 60px; 
-  }
+@media (max-width: 620px) {
+  .resume-header { padding: 24px 0 64px; }
+  .resume-header .button { width: 100%; }
+  .profile-panel { padding: 30px 22px; margin-bottom: 68px; }
+  .timeline-meta { display: grid; gap: 6px; }
+  .timeline-meta span:last-child { text-align: left; }
 }
 </style>

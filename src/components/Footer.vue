@@ -1,52 +1,26 @@
 <template>
-  <div class="footer">
-    
-    <!-- <div class="left"><a href="https://github.com/schouffy/gamedev-portfolio" target="blank">Portfolio</a> by schouffy</div> -->
-    <div class="right">Reach me at <a href="mailto:cmilo1357@gmail.com">cmilo1357@gmail.com</a> or <router-link to="/contact">through here.</router-link></div>
-  </div>
+  <footer class="footer">
+    <div class="footer-shell">
+      <p><span aria-hidden="true">©</span> 2026 Camilo Sanchez</p>
+      <p>Gameplay systems <span>·</span> Technical art <span>·</span> UEFN</p>
+      <a href="mailto:cmilo1269@gmail.com">cmilo1269@gmail.com</a>
+    </div>
+  </footer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({
-  name: "Footer"
-});
+import Vue from 'vue';
+export default Vue.extend({ name: 'Footer' });
 </script>
 
-<style scoped lang="less">
-
-@import '../css/variables.less';
-
-.footer {
-  background-color: @bodyBgColor;
-  width: 100%;
-  font-size: 0.8em;
-  opacity: 0.7;
-  padding-bottom: 30px;
-}
-
-.left, .right {
-    padding-top: 10px;
-    text-align: center;
-  }
-
-@media only screen and (min-width: 620px){
-
-  .footer {
-    padding: 0;
-  }
-
-  .left, .right {
-    padding: 20px;
-  }
-
-  .left {
-    float: left;
-  }
-
-  .right {
-    float:right;
-  }
+<style scoped>
+.footer { border-top: 1px solid var(--line); background: rgba(7,9,13,.9); }
+.footer-shell { width: min(100%, var(--max-width)); min-height: 96px; margin: 0 auto; padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--dim); font: 600 .66rem/1.5 'IBM Plex Mono', monospace; letter-spacing: .04em; text-transform: uppercase; }
+.footer-shell p { margin: 0; }
+.footer-shell p span { color: var(--cyan); }
+.footer-shell a { color: var(--muted); text-transform: none; }
+.footer-shell a:hover { color: var(--cyan); }
+@media (max-width: 760px) {
+  .footer-shell { align-items: flex-start; flex-direction: column; gap: 8px; padding: 28px 18px; }
 }
 </style>

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -22,8 +21,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/other-projects',
-    name: 'Other Projects',
-    component: () => import(/* webpackChunkName: "about" */ '../views/OtherProjects.vue')
+    redirect: '/game-projects'
   },
   {
     path: '/contact',
@@ -43,6 +41,12 @@ const routes: Array<RouteConfig> = [
 
 const router = new VueRouter({
   routes
+})
+
+router.afterEach((to) => {
+  const suffix = 'Camilo Sanchez'
+  document.title = to.name === 'Root' ? `${suffix} | UEFN Developer & Technical Artist` : `${to.name} | ${suffix}`
+  window.scrollTo(0, 0)
 })
 
 export default router

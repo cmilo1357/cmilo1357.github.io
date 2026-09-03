@@ -1,131 +1,113 @@
-import ProjectData from '@/data/ProjectData.ts'
+export interface ProjectStat {
+  value: string;
+  label: string;
+}
 
-export default [
-    new ProjectData("project-1", "GRIEFVILLE", "img/projects/griefville-thumbnail.png", 
-    `
-    <div class="paragraph">
-     <strong>Griefville</strong> was a multiplayer game, with live events and multiple game modes, for Roblox. For this game I worked as Technical Artist.
-     <br/>Image by <a href="https://www.pexels.com/fr-fr/@knownasovan" target="_blank">OVAN</a>.
-    </div>
-    <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/watch?v=-MnJotND_aA" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="paragraph center">
-        <a href="https://www.roblox.com/es/games/16578847473/FREE-WEAPON-GRIEFVILLE-x-Chucky-Karma-Wars" target="_blank"><img src="img/projects/roblox-logo.png" alt="Roblox Logo badge" /></a>
-    </div>
+export interface GameProject {
+  id: string;
+  title: string;
+  platform: string;
+  status: string;
+  role: string;
+  summary: string;
+  image?: string;
+  imageAlt?: string;
+  visualClass?: string;
+  stats: ProjectStat[];
+  highlights: string[];
+  stack: string[];
+  url?: string;
+  urlLabel?: string;
+}
 
-    <div class="paragraph">
-        Main features :
-        <ul>
-        <li>For a limited time, players can take on the role of Chucky, the infamous killer doll, 
-        to stalk and eliminate other users or try to survive his onslaught.</li>
-        <li>The map expands with new updates, introducing more familiar horror environments.</li>
-        <li>During the day, players prepare for the horrors to come, while at night, 
-        they face nightmare portals that transport them into various game modes.</li>
-        <li>The game features realistic environments, chilling soundscapes, and haunting music that heighten the tension.</li>
-        </ul>
-    </div>
-
-    <div class="paragraph center">
-        <img class="pc-screenshot" src="https://i.ibb.co/35KdDcH/GF1.png" alt="Town Portal VFX" />
-        <img class="pc-screenshot" src="https://i.ibb.co/TRmncBS/GF2.png" alt="Spider Web Attack VFX" />
-        <img class="pc-screenshot" src="https://i.ibb.co/8XXM8QV/GF3.png" alt="Acid Waterfall VFX" />
-    </div>
-    `, "#23bd69", true),
-    new ProjectData("project-2", "BATTLE ACADEMY", "img/projects/battle-academy-thumbnail.png", `
-    <div class="paragraph">
-        <strong>Batlle academy</strong> is a rogue-like where the player advances trough different rooms full of enemies and completes missions. 
-        This map was made completely by me in uefn 
-        <br/>Image by <a target="_blank" href="https://www.pexels.com/fr-fr/@adonyi-gabor-604571">Adonyi Gábor</a>.
-    </div>
-    <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="paragraph">
-        Main features :
-        <ul>
-        <li>The player can choose from four distinct classes, each with its own unique loadout. As players level up their chosen class, 
-        they'll improve their loadouts.</li>
-        <li>Players can purchase various upgrades through a fully responsive UI, ensuring a seamless and intuitive experience across all devices.</li>
-        <li>After completing a room, the player can select one of three randomly generated perks, adding a layer of strategy to their progression.</li>
-        <li>The game features a variety of mission types for each room, such as eliminating enemies, defusing bombs, and retrieving intel</li>
-        </ul>
-    </div>
-
-    <div class="paragraph">
-    <div class="notice">
-        Windows build available on <a href="https://some.where/nice" target="_blank">itch.io</a>.
-        Source code is available on <a href="https://github.com/yourself" target="_blank">GitHub</a>.
-    </div>
-    </div>
-
-    <div class="paragraph center">
-    <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Singing Addict Screenshot" />
-    <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Singing Addict Screenshot" />
-    <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Singing Addict Screenshot" />
-    <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Singing Addict Screenshot" />
-    </div>
-    `, "#5a78af"),
-    new ProjectData("project-3", "EPIC FALL ARENA", "img/projects/epic-fall-arena-thumbnail.png", `
-    <div class="paragraph">
-        <strong>Epic fall arena</strong> is a team-based battle where the players fight to stay in the arena and don't fall, 
-        both the arena and the weapons change with each round. I created this entire map myself using UEFN.
-        <br/>Image by <a target="_blank" href="https://www.pexels.com/fr-fr/@miphotography">Miesha Maiden</a>.
-    </div>
-    <div class="paragraph center">
-        <iframe class="youtube" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="paragraph">
-        Main features :
-        <ul>
-        <li>Each arena offers a unique combat experience, featuring it's own hazards and weapon selections, 
-        challenging players to adapt their strategies in every battle.</li>
-        <li>Players can choose from a selection of loadouts and select their favorite for use in the round.</li>
-        <li>Each arena features its own unique systems to enhance and diversify the gameplay experience.</li>
-        </ul>
-    </div>
-
-    <div class="paragraph">
-        <div class="notice">
-        Playable in the browser (WebGL) on <a href="https://some.where/nice" target="_blank">itch.io</a>.
-        Source code is available on <a href="https://github.com/yourself" target="_blank">GitHub</a>.
-        </div>
-    </div>
-
-    <div class="paragraph center">
-        <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Drawing Overload Screenshot" />
-        <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Drawing Overload Screenshot" />
-        <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Drawing Overload Screenshot" />
-        <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Drawing Overload Screenshot" />
-    </div>
-    `, "#383838"),
-    new ProjectData("project-4", "ROOMS CONTROL 2V2", "img/projects/rooms-control-2v2-thumbnail.png", `
-    <div class="paragraph">
-    <strong>Rooms control 2v2</strong> is a box-fight for duos where the players fight across 20 different rooms. This was my first map made with UEFN.
-    <br/>Image by <a target="_blank" href="https://www.pexels.com/fr-fr/@neo8iam">NEOSiAM 2020</a>.
-    </div>
-    
-    <div class="paragraph">
-        Main features :
-        <ul>
-        <li>Each room offers a completely unique battle experience.</li>
-        <li>Players can vote for their favorite loadout to use in the game.</li>
-        <li>There’s a ranking system where players can advance through ranks and earn cosmetic rewards at higher levels.</li>
-        <li>Player data is saved, allowing them to continue improving their score across sessions.</li>
-        </ul>
-    </div>
-
-    <div class="paragraph">
-        <div class="notice">
-        Windows build available on <a href="https://some.where/nice" target="_blank">itch.io</a>.
-        </div>
-    </div>
-
-    <div class="paragraph center">
-        <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Eugeneable Screenshot" />
-        <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Eugeneable Screenshot" />
-    </div>
-    `, "#e80fb7")
+const projects: GameProject[] = [
+  {
+    id: 'fortune-city',
+    title: 'Fortune City',
+    platform: 'UEFN · Fortnite',
+    status: 'In development',
+    role: 'Solo UEFN / Verse Developer & Technical Artist',
+    summary: 'A persistent multiplayer city experience where jobs, housing, activities, shops, progression, and the player economy operate as one connected ecosystem.',
+    visualClass: 'fortune-visual',
+    stats: [
+      { value: '16', label: 'Player sessions' },
+      { value: '01', label: 'Persistent profile' },
+      { value: '360°', label: 'End-to-end ownership' }
+    ],
+    highlights: [
+      'Architected isolated per-player runtimes for economy, jobs, modifiers, UI, audio, and saved progression.',
+      'Built reusable, event-driven systems for job contracts, housing upgrades, activities, shops, banking, and inventory.',
+      'Owned gameplay, UI, level design, technical art, debugging, performance, and publishing workflows.'
+    ],
+    stack: ['Verse', 'UEFN', 'UMG', 'Persistence', 'Niagara', 'HLSL']
+  },
+  {
+    id: 'battle-academy',
+    title: 'Battle Academy',
+    platform: 'UEFN · Fortnite',
+    status: 'Released · Archived',
+    role: 'Solo UEFN Developer',
+    summary: 'A one-to-four-player roguelike built around combat rooms, class progression, varied mission types, random perks, and permanent upgrades.',
+    image: 'img/projects/battle-academy-thumbnail.webp',
+    imageAlt: 'Battle Academy key art with four Fortnite characters',
+    stats: [
+      { value: '1.7M', label: 'Minutes played' },
+      { value: '8.6K', label: 'Favorites' },
+      { value: '04', label: 'Playable classes' }
+    ],
+    highlights: [
+      'Designed four classes with distinct loadouts, upgrade paths, and player-facing progression.',
+      'Created repeatable room missions including combat, bomb defusal, and intel retrieval.',
+      'Implemented responsive UI, randomized perk selection, persistent upgrades, and the complete content pipeline.'
+    ],
+    stack: ['Verse', 'UEFN', 'Game Design', 'UI', 'VFX', 'Level Design'],
+    url: 'https://fortnite.gg/island?code=2537-1041-1759',
+    urlLabel: 'View island archive'
+  },
+  {
+    id: 'no-safe-zone',
+    title: 'No Safe Zone',
+    platform: 'UEFN · Fortnite',
+    status: 'Independent project',
+    role: 'Solo UEFN / Verse Developer & Technical Artist',
+    summary: 'A dark extraction experience featuring hostile walkers, zone-based missions, crafting, shops, a black market, and persistent player progression.',
+    image: 'img/projects/no-safe-zone-thumbnail.png',
+    imageAlt: 'A foggy fortified prison environment from No Safe Zone',
+    stats: [
+      { value: '16', label: 'Player sessions' },
+      { value: '04', label: 'Mission threat tiers' },
+      { value: '∞', label: 'Replayable extraction loop' }
+    ],
+    highlights: [
+      'Developed the extraction, inventory, rewards, mission, NPC, crafting, and player-data systems in Verse.',
+      'Built a layered UI flow for mission tracking, stores, crafting, rewards, and the black market.',
+      'Connected gameplay state, persistence, team flow, onboarding, and world interactions through modular managers.'
+    ],
+    stack: ['Verse', 'UEFN', 'Extraction Systems', 'NPCs', 'UI', 'Persistence']
+  },
+  {
+    id: 'griefville',
+    title: 'Griefville',
+    platform: 'Roblox · Licensed IP',
+    status: 'Shipped at ON3D Studios',
+    role: 'Technical Artist',
+    summary: 'A multiplayer horror experience with a day-and-night loop, live content, nightmare portals, and a limited-time Chucky collaboration.',
+    image: 'img/projects/griefville-thumbnail.webp',
+    imageAlt: 'Griefville Survive the Nightmare key art featuring Chucky',
+    stats: [
+      { value: '2.3M+', label: 'Visits' },
+      { value: '16', label: 'Player servers' },
+      { value: 'Live', label: 'Event-driven content' }
+    ],
+    highlights: [
+      'Created and integrated real-time VFX that communicated gameplay events across the experience.',
+      'Produced hand-painted textures and effects for portals, abilities, hazards, and live-event content.',
+      'Worked closely with developers to iterate on mechanics and keep effects within performance targets.'
+    ],
+    stack: ['Roblox', 'Lua', 'Real-time VFX', 'Photoshop', 'After Effects', 'Optimization'],
+    url: 'https://www.roblox.com/games/16578847473',
+    urlLabel: 'View on Roblox'
+  }
 ];
+
+export default projects;
